@@ -76,7 +76,7 @@ public class ServiceCollectionExtensionsTests
     {
         // Arrange
         var services = new ServiceCollection();
-        var configuration = CreateConfiguration(new());
+        var configuration = CreateConfiguration([]);
 
         // Act
         services.AddMongoDatabase(configuration);
