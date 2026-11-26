@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Mongo/Mongo.csproj" />
+    <Project Path="src/Postgres/Postgres.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Mongo.Tests/Mongo.Tests.csproj" />
+    <Project Path="tests/Postgres.Tests/Postgres.Tests.csproj" />
+  </Folder>
+</Solution>

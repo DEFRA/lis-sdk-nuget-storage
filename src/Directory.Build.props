@@ -1,0 +1,34 @@
+<Project>
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+
+  <!-- NuGet metadata -->
+  <PropertyGroup>
+    <PackageId>$(RootNamespace)</PackageId>
+    <Version Condition="'$(Version)' == ''">0.1.0</Version>
+    <Authors>Defra</Authors>
+    <Company>Defra</Company>
+    <PackageTags>defra;dotnet;livestock;database;postgres;efcore;mongodb</PackageTags>
+
+    <PackageProjectUrl>https://github.com/DEFRA/lis-sdk-nuget-storage</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/DEFRA/lis-sdk-nuget-storage</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- README packed as the package readme. Projects with their own README.md override this in their Directory.Build.props. -->
+    <PackageReadmeSource>$(MSBuildThisFileDirectory)../README.md</PackageReadmeSource>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <InternalsVisibleTo Include="$(AssemblyName).Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)../LICENSE" Pack="true" PackagePath="/" />
+    <None Include="$(MSBuildThisFileDirectory)../icon.png" Pack="true" PackagePath="/" />
+    <None Include="$(PackageReadmeSource)" Pack="true" PackagePath="/README.md" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,7 @@
+﻿#nullable enable
+Defra.Livestock.Sdk.Storage.Mongo.IMongoDbClientFactory
+Defra.Livestock.Sdk.Storage.Mongo.IMongoDbClientFactory.GetClient() -> MongoDB.Driver.IMongoClient!
+Defra.Livestock.Sdk.Storage.Mongo.IMongoDbClientFactory.GetCollection<T>(string! collection) -> MongoDB.Driver.IMongoCollection<T>!
+Defra.Livestock.Sdk.Storage.Mongo.IMongoDbClientFactory.GetDatabase() -> MongoDB.Driver.IMongoDatabase!
+Defra.Livestock.Sdk.Storage.Mongo.ServiceCollectionExtensions
+static Defra.Livestock.Sdk.Storage.Mongo.ServiceCollectionExtensions.AddMongoDatabase(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, Microsoft.Extensions.Configuration.IConfiguration! configuration) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!

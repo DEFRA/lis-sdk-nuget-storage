@@ -1,0 +1,7 @@
+﻿#nullable enable
+Defra.Livestock.Sdk.Storage.Postgres.PostgresConnection
+Defra.Livestock.Sdk.Storage.Postgres.PostgresConnection.ReadOnly = 1 -> Defra.Livestock.Sdk.Storage.Postgres.PostgresConnection
+Defra.Livestock.Sdk.Storage.Postgres.PostgresConnection.ReadWrite = 0 -> Defra.Livestock.Sdk.Storage.Postgres.PostgresConnection
+Defra.Livestock.Sdk.Storage.Postgres.ServiceCollectionExtensions
+static Defra.Livestock.Sdk.Storage.Postgres.ServiceCollectionExtensions.AddPostgres(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, Microsoft.Extensions.Configuration.IConfiguration! configuration) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Defra.Livestock.Sdk.Storage.Postgres.ServiceCollectionExtensions.AddPostgresDbContext<TContext>(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, Defra.Livestock.Sdk.Storage.Postgres.PostgresConnection connection, System.Action<Microsoft.EntityFrameworkCore.DbContextOptionsBuilder!>? configure = null) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
